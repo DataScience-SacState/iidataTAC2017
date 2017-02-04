@@ -1,0 +1,12 @@
+
+avg of all countries based on UK scores
+7.71909210568558
+1 rows returned in 136ms from: select  avg(CAST (nutrition_score_uk_100g  as integer)), countries_en from ffclean6;
+
+avg of France based on UK scores
+7.75865709459459
+select avg( CAST (nutrition_score_uk_100g  as integer)) from ffclean6 where countries_en like '%France%'
+
+avg of NOT France based on UK stores
+7.5936537689115
+select avg( CAST (nutrition_score_uk_100g  as integer)) from ffclean6 where countries_en not like '%France%'
