@@ -1,0 +1,15 @@
+#1
+
+avg score of all countries = 7.98163664965167
+31149 rows returned in 95ms from: select ( CAST (nutrition_score_fr_100g  as integer)), countries_en from ffclean6;
+
+avg_score where country has france in it 8.06925675675676"
+select avg( CAST (nutrition_score_fr_100g  as integer)) from ffclean6
+where countries_en like '%France%' ;
+
+avg_score where country does not contain france in it  = 7.70384254920337
+1 rows returned in 132ms from: select avg( CAST (nutrition_score_fr_100g  as integer)), countries_en from ffclean6
+where countries_en not like '%France%' ;
+
+ruh roh... they're different
+
